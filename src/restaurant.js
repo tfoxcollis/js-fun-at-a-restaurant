@@ -38,14 +38,14 @@ function addMenuItem(obj, item) {
   }
 }
 // first attempt at removing menu item
-function removeMenuItem(restObj, name, type) {
-  for(var i = 0; i < restObj.menus.breakfast.length; i++){
-    if(restObj.menus.breakfast[i].name === name){
-      restObj.menus.breakfast.splice(i, 1);
-      return `No one is eating our ${name} - it has been removed from the breakfast menu!`
-    }
-  }
-}
+// function removeMenuItem(restObj, name, type) {
+//   for(var i = 0; i < restObj.menus.breakfast.length; i++){
+//     if(restObj.menus.breakfast[i].name === name){
+//       restObj.menus.breakfast.splice(i, 1);
+//       return `No one is eating our ${name} - it has been removed from the breakfast menu!`
+//     }
+//   }
+// }
 
 function removeMenuItem(restObj, name, type){
   if(type === "breakfast"){
@@ -69,9 +69,8 @@ function removeMenuItem(restObj, name, type){
         return `No one is eating our ${name} - it has been removed from the dinner menu!`
       }
     }
-
   }
-  
+
   return `Sorry, we don't sell ${name}, try adding a new recipe!`
 }
 module.exports = {
